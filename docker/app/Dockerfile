@@ -3,7 +3,7 @@ FROM rust:latest as bulder
 WORKDIR /usr/src/myapp
 COPY . .
 RUN rustup target add x86_64-unknown-linux-musl
-RUN cargo build --release
+RUN cargo build --target x86_64-unknown-linux-musl  --release
 
 FROM scratch
 
