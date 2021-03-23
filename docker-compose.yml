@@ -4,3 +4,5 @@ services:
     build:
       dockerfile: ./docker/app/Dockerfile
       context: .
+    ports:
+      - 8080:8080
